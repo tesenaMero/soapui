@@ -481,4 +481,123 @@ declare namespace SOAP-ENV='http://schemas.xmlsoap.org/soap/envelope/';
          <currency>CZK</currency>
       </hel:editCountryRequest>\r
    </soapenv:Body>\r
-</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="2d6403eb-eaeb-4e35-925e-3fc1e0cf7784" disabled="true"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>Name</con:name><con:value>Slovakia</con:value></con:property><con:property><con:name>population</con:name><con:value>444</con:value></con:property><con:property><con:name>capital</con:name><con:value>Bratislava</con:value></con:property><con:property><con:name>currency</con:name><con:value>66,6</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="2d6403eb-eaeb-4e35-925e-3fc1e0cf7784" disabled="true"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties><con:property><con:name>Name</con:name><con:value>Slovakia</con:value></con:property><con:property><con:name>population</con:name><con:value>444</con:value></con:property><con:property><con:name>capital</con:name><con:value>Bratislava</con:value></con:property><con:property><con:name>currency</con:name><con:value>66,6</con:value></con:property></con:properties></con:testCase><con:properties/></con:testSuite><con:testSuite id="a6696643-7d90-4005-9489-b810ccccf602" name="ResponseTimeCheck"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="6cf569b7-d483-45b6-9e20-6d6d4c4f0d70" failOnError="false" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="SingleReponseCheck" searchProperties="true" timeout="0" wsrmEnabled="false" wsrmVersion="1.0" wsrmAckTo="" amfAuthorisation="false" amfEndpoint="" amfLogin="" amfPassword=""><con:settings/><con:testStep type="request" name="create" id="a9b80e33-aa97-4e6e-9648-d0e2f6eac616"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountriesPortSoap11</con:interface><con:operation>createCountry</con:operation><con:request name="create" id="75ebe432-3cd6-45cf-810c-d4af03e38693"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://radiant-scrubland-50409.herokuapp.com:443/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hel="http://hello">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <hel:createCountryRequest>\r
+         <name>CZK</name>\r
+         <population>?</population>\r
+         <capital>?</capital>\r
+         <currency>?</currency>\r
+      </hel:createCountryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="70b99216-efdb-47ff-ac5f-da36732125e2"/><con:assertion type="Response SLA Assertion" id="ce43f60f-9026-4d98-8cf6-cf1963732079" name="Response SLA"><con:configuration><SLA>500</SLA></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="get" id="7a80bfd5-2e73-4fc6-90c0-07a616793552"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountriesPortSoap11</con:interface><con:operation>getCountry</con:operation><con:request name="get" id="ac433224-2a1e-4e12-80ea-f4ad7b7c4282"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://radiant-scrubland-50409.herokuapp.com:443/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hel="http://hello">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <hel:getCountryRequest>\r
+         <name>CZK</name>\r
+      </hel:getCountryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="f3c345b7-a7f5-43af-a0e4-f0bdff907fce"/><con:assertion type="Response SLA Assertion" id="c92da7d5-589d-4914-a89d-53252a61ac33" name="Response SLA"><con:configuration><SLA>500</SLA></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="edit" id="d69ea7b5-5c42-496b-9b78-4fcaa9ab0e02"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountriesPortSoap11</con:interface><con:operation>editCountry</con:operation><con:request name="edit" id="3ed4a405-e725-46fa-8c0d-4b8e123f3ff5"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://radiant-scrubland-50409.herokuapp.com:443/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hel="http://hello">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <hel:editCountryRequest>\r
+         <name>CZK</name>\r
+         <population>222</population>\r
+         <capital>?</capital>\r
+         <currency>?</currency>\r
+      </hel:editCountryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="2d3bf619-0e8f-4370-925e-48aa0f9f6eb3"/><con:assertion type="Response SLA Assertion" id="8fcae4eb-5434-403c-9e92-3041ab9cd4ff" name="Response SLA"><con:configuration><SLA>500</SLA></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="delete" id="be43e10f-90f7-4b16-89c2-310f7dc144e0"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountriesPortSoap11</con:interface><con:operation>deleteCountry</con:operation><con:request name="delete" id="86546323-a66f-46ab-b5c9-e351cf4663fe"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://radiant-scrubland-50409.herokuapp.com:443/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hel="http://hello">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <hel:deleteCountryRequest>\r
+         <name>CZK</name>\r
+      </hel:deleteCountryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="9e9ec9ea-326c-44b2-9755-33377a49079e"/><con:assertion type="Response SLA Assertion" id="85a39faa-7354-4d4e-a728-443663ce29fb" name="Response SLA"><con:configuration><SLA>500</SLA></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:testCase id="4d555653-2705-4d71-8a4f-2891ba316917" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="MultiResponseCheck" searchProperties="true"><con:settings/><con:testStep type="request" name="create" id="2ab1e80b-dbbd-4883-9bfa-72f6b3add05c"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountriesPortSoap11</con:interface><con:operation>createCountry</con:operation><con:request name="create" id="bb33a1c8-c505-4642-bfc1-bc24d6f10edc"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://radiant-scrubland-50409.herokuapp.com:443/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hel="http://hello">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <hel:createCountryRequest>\r
+         <name>CZK</name>\r
+         <population>?</population>\r
+         <capital>?</capital>\r
+         <currency>?</currency>\r
+      </hel:createCountryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="bf34e599-01ac-4b76-89a8-a72a16f23ec8"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="create2" id="8f2903d3-1f08-4995-8d05-7c594ae3fc57"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountriesPortSoap11</con:interface><con:operation>createCountry</con:operation><con:request name="create2" id="f0f1cb1b-1f06-4946-996c-76230022cb24"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://radiant-scrubland-50409.herokuapp.com:443/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hel="http://hello">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <hel:createCountryRequest>\r
+         <name>CZK2</name>\r
+         <population>?</population>\r
+         <capital>?</capital>\r
+         <currency>?</currency>\r
+      </hel:createCountryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="52e71ac0-57d9-47ac-bed2-bbb26bce2978"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="create3" id="4e05ad88-8821-415a-893a-1743a3831124"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountriesPortSoap11</con:interface><con:operation>createCountry</con:operation><con:request name="create3" id="65410355-63e5-4480-80ed-ad9c3b5a734a"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://radiant-scrubland-50409.herokuapp.com:443/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hel="http://hello">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <hel:createCountryRequest>\r
+         <name>CZK2</name>\r
+         <population>?</population>\r
+         <capital>?</capital>\r
+         <currency>?</currency>\r
+      </hel:createCountryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="db15d3ee-439a-4473-a827-b21e65b3a69c"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="create4" id="d217a705-f0f5-48f7-8797-f0933f9c27bf"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountriesPortSoap11</con:interface><con:operation>createCountry</con:operation><con:request name="create4" id="4c1373fa-03f3-476b-8797-69b2e34cf98f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://radiant-scrubland-50409.herokuapp.com:443/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hel="http://hello">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <hel:createCountryRequest>\r
+         <name>CZK3</name>\r
+         <population>?</population>\r
+         <capital>?</capital>\r
+         <currency>?</currency>\r
+      </hel:createCountryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="3426122d-e203-4f19-a952-4347643f9a24"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="create5" id="8c10e62f-f85a-4642-9a1c-0a9e399f57c1"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountriesPortSoap11</con:interface><con:operation>createCountry</con:operation><con:request name="create5" id="7ef46b83-e29a-492f-a3c8-3c0355d488b8"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://radiant-scrubland-50409.herokuapp.com:443/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hel="http://hello">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <hel:createCountryRequest>\r
+         <name>CZK4</name>\r
+         <population>?</population>\r
+         <capital>?</capital>\r
+         <currency>?</currency>\r
+      </hel:createCountryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="98db9e06-cf74-449e-919a-52a067820cc2"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="get" id="0e13a82c-7069-42e8-ba31-99981b34791b"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountriesPortSoap11</con:interface><con:operation>getCountry</con:operation><con:request name="get" id="0d343ce6-3605-43ca-b349-08913bf0fc7c"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://radiant-scrubland-50409.herokuapp.com:443/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hel="http://hello">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <hel:getCountryRequest>\r
+         <name>CZK</name>\r
+      </hel:getCountryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="d8c70097-e352-4153-a5fb-9b278bda6491"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="get2" id="ceabb945-2005-43f3-aa8b-e7f68eb0708d"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountriesPortSoap11</con:interface><con:operation>getCountry</con:operation><con:request name="get2" id="fa3fc1fb-c194-426f-85e5-df38ffc0741f"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://radiant-scrubland-50409.herokuapp.com:443/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hel="http://hello">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <hel:getCountryRequest>\r
+         <name>CZK1</name>\r
+      </hel:getCountryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="86a4ca24-83a7-42ec-9fa2-894677f7d1ce"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="get3" id="245c520c-d827-4d2c-a9da-a8eb2a2f14b5"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountriesPortSoap11</con:interface><con:operation>getCountry</con:operation><con:request name="get3" id="93439959-7b35-4547-9f36-17db31fbed93"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://radiant-scrubland-50409.herokuapp.com:443/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hel="http://hello">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <hel:getCountryRequest>\r
+         <name>CZK2</name>\r
+      </hel:getCountryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="0f02b8b3-27b6-4dfe-984e-43ce3308ddd5"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="get4" id="16aed88c-de93-48de-bc2a-1027f9b5b241"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountriesPortSoap11</con:interface><con:operation>getCountry</con:operation><con:request name="get4" id="c9bec30a-0369-4940-9323-910d62381726"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://radiant-scrubland-50409.herokuapp.com:443/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hel="http://hello">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <hel:getCountryRequest>\r
+         <name>CZK3</name>\r
+      </hel:getCountryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="9d5dee30-39ad-4a7e-9193-22ec695b8af8"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="get5" id="66d48439-1dfd-40b4-a10d-2caa109f48c7"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>CountriesPortSoap11</con:interface><con:operation>getCountry</con:operation><con:request name="get5" id="9b5cbaa9-52b8-4e4c-9b33-3e14e5eb5b60"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://radiant-scrubland-50409.herokuapp.com:443/ws</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hel="http://hello">\r
+   <soapenv:Header/>\r
+   <soapenv:Body>\r
+      <hel:getCountryRequest>\r
+         <name>CZK4</name>\r
+      </hel:getCountryRequest>\r
+   </soapenv:Body>\r
+</soapenv:Envelope>]]></con:request><con:assertion type="SOAP Response" id="34411a04-ded4-461d-949b-a3ff1c1a2370"/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:loadTest id="25955a3e-58ec-438d-be26-47fec4abce81" name="SimpleLoadTest"><con:settings><con:setting id="HttpSettings@close-connections">false</con:setting></con:settings><con:threadCount>5</con:threadCount><con:startDelay>0</con:startDelay><con:sampleInterval>250</con:sampleInterval><con:calculateTPSOnTimePassed>true</con:calculateTPSOnTimePassed><con:resetStatisticsOnThreadCountChange>true</con:resetStatisticsOnThreadCountChange><con:historyLimit>-1</con:historyLimit><con:testLimit>10</con:testLimit><con:limitType>COUNT_PER_THREAD</con:limitType><con:loadStrategy><con:type>Simple</con:type><con:config><testDelay>100</testDelay><randomFactor>0.5</randomFactor></con:config></con:loadStrategy><con:assertion type="Step Status" name="Step Status"><con:configuration><name>Step Status</name><min-requests>0</min-requests><test-step>- Any -</test-step><max-errors>-1</max-errors></con:configuration></con:assertion><con:assertion type="Step Average" name="Step Average"><con:configuration><name>Step Average</name><min-requests>49</min-requests><max-average>500</max-average><test-step>- Any -</test-step><max-errors>-1</max-errors><sample-interval>20</sample-interval></con:configuration></con:assertion><con:maxAssertionErrors>100</con:maxAssertionErrors><con:cancelExcessiveThreads>true</con:cancelExcessiveThreads><con:strategyInterval>500</con:strategyInterval></con:loadTest><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
